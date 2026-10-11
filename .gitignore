@@ -4,3 +4,4 @@ frontend/dist/
 !frontend/.env.pages
 .DS_Store
 *.log
+.vercel/

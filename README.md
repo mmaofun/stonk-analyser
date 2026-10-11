@@ -28,6 +28,24 @@ This snapshot contains the frontend source required to build the demonstration.
 The later account service and worker are separate and remain gated until live
 security, billing, capacity, recovery, cost and licensing checks pass.
 
+## Vercel deployment
+
+Import this GitHub repository with the repository root as the Vercel Root
+Directory. The committed `vercel.json` installs and tests `frontend/`, then
+builds its static output with the correct `/` base path. No custom domain is
+required; the project can use its provided `vercel.app` hostname.
+
+The default deployment remains an illustrative UI preview while the Oracle
+analysis service is prepared. Live mode requires `VITE_DEPLOYMENT_MODE=public`
+and `VITE_API_BASE_URL` set to the verified HTTPS analysis API. This does not
+remove the backend's launch and spending gates. Provider credentials stay on
+the server. A missing live API URL fails the build instead of pointing visitors
+at a local development server.
+
+Choose a Vercel plan compatible with the project's use. Hobby is restricted to
+personal non-commercial projects; commercial use requires Pro or Enterprise.
+Existing billing approval requirements remain in force.
+
 ## Attribution and license
 
 Derived from [666ghj/MiroFish](https://github.com/666ghj/MiroFish), with modified

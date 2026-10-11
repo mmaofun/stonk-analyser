@@ -1,5 +1,5 @@
 {
-  "purpose": "Static preview source for mmaofun/stonk-analyser; no backend or private reports",
+  "purpose": "Static preview source for mmaofun/stonk-analyser; Vercel setup with gated future live mode",
   "files": [
     {
       "path": ".github/workflows/pages-preview.yml",
@@ -8,8 +8,13 @@
     },
     {
       "path": ".gitignore",
-      "sha256": "b5bee37286ccddba54f8c427a8fa8993b4e79189b7516898fe2f73bbc0e71b2e",
-      "bytes": 72
+      "sha256": "eb525fae493c4093e889a92ede6e1085495930ff32f31bba61e361494cff6904",
+      "bytes": 81
+    },
+    {
+      "path": ".vercelignore",
+      "sha256": "369a87ab230091af06a6c00dfb0c4681c5c7c4564822a91a1cf1f20f0c20b013",
+      "bytes": 93
     },
     {
       "path": "LICENSE",
@@ -18,8 +23,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "82bc0b6035aab0ef6c394dd54f15ec9d1f72df72f5f4f51b1ebd8153dd231ec5",
-      "bytes": 1578
+      "sha256": "bbab82d6fde4d9f600322dbb80428dafca18af8855c7bb3fead482248e0f69ab",
+      "bytes": 2528
     },
     {
       "path": "frontend/.env.pages",
@@ -38,8 +43,8 @@
     },
     {
       "path": "frontend/package.json",
-      "sha256": "db6672a7fcec98eb980f37def0719695e11b5cba58670152a4ae2147ad394368",
-      "bytes": 631
+      "sha256": "1a3fd3eb309cce2474ee498069beada4ef8763f1f7e4a3886dfe8863dba8a5e2",
+      "bytes": 687
     },
     {
       "path": "frontend/public/brand/mmaofun-mark.png",
@@ -757,9 +762,19 @@
       "bytes": 37533
     },
     {
+      "path": "scripts/build_vercel.mjs",
+      "sha256": "0636be8ec0240ec3dfb86fa3903c219fdd9d71a8c2d903c7e47c2ab21132e9d9",
+      "bytes": 1064
+    },
+    {
       "path": "scripts/check_preview.mjs",
       "sha256": "65f8d92508f38eeccf0afe32d53d23d2d72cd1dbcecee78a7cf627a98510d15e",
       "bytes": 1150
+    },
+    {
+      "path": "vercel.json",
+      "sha256": "771b39904d494e34e89ba0d4e20d9a415af43b4528d252d7e5a9565be32d3d83",
+      "bytes": 480
     }
   ]
 }
