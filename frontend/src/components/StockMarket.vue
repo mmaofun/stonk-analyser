@@ -1,0 +1,39 @@
+<template>
+  <section class="stock-market">
+    <div class="stock-section-heading"><div><h2>A market made from actual virtual orders</h2><p>Three assumed liquidity settings. Clearing rounds are computational events, not days or the investment horizon.</p></div></div>
+    <p v-if="!scenarios.length" class="stock-empty">{{ reference ? 'Market scenarios appear after the investors form their private views and discuss the research.' : 'A timestamped stock quote is required for numerical simulation. Company research can still be inspected.' }}</p>
+    <template v-else>
+      <div class="scenario-selector"><button v-for="(scenario,i) in scenarios" :key="scenario.name" :aria-pressed="chosen === i" :class="{active:chosen === i}" @click="chosen=i"><span :style="{background:colors[i]}"/>{{ scenario.name }}</button></div>
+      <div class="market-summary"><div><span>Reported reference price</span><strong>{{ money(reference,currency) }}</strong></div><div><span>Simulated ending price</span><strong>{{ money(current.last_price,currency) }}</strong></div><div><span>Simulated change</span><strong>{{ percent(current.simulated_return) }}</strong></div><div><span>Shares actually matched</span><strong>{{ number(current.total_traded_shares) }}</strong></div></div>
+      <div class="market-plot"><svg viewBox="0 0 900 320" role="img" aria-label="Simulated prices across clearing rounds and liquidity scenarios"><g v-for="tick in ticks" :key="tick"><line x1="70" x2="874" :y1="y(tick)" :y2="y(tick)" stroke="#e5e9ee"/><text x="60" :y="y(tick)+4" text-anchor="end">{{ number(tick) }}</text></g><line x1="70" x2="874" :y1="y(reference)" :y2="y(reference)" stroke="#8793a5" stroke-dasharray="5 5"/><path v-for="(scenario,i) in scenarios" :key="scenario.name" :d="path(scenario.tape)" fill="none" :stroke="colors[i]" :stroke-width="chosen === i ? 3 : 1.5" :opacity="chosen === i ? 1 : .55"/><g v-for="round in current.tape" :key="round.round"><text v-if="round.round % 2 === 0" :x="x(round.round)" y="303" text-anchor="middle">{{ round.round }}</text></g></svg></div>
+      <p class="stock-subtle plot-caption">Prices in {{ currency }} · Clearing round · dashed line is the reported reference price. Scenario outcomes are not calibrated market probabilities.</p>
+      <div class="ledger-status"><span class="ledger-dot"/>Cash and shares conserved across all counterparties<span>Virtual fees: {{ money(current.fees,currency) }}</span></div>
+      <div class="stock-section-heading trades-heading"><div><h3>Recorded trades</h3><p>Every row has a buyer, seller and cash transfer. Liquidity providers are finite code-driven accounts.</p></div><label for="stock-market-counterparty">Counterparty<select id="stock-market-counterparty" v-model="actor"><option value="">All participants</option><option v-for="person in current.investors" :key="person.id" :value="person.id">{{ person.name }}</option></select></label></div>
+      <div class="stock-table-wrap"><table class="stock-table"><thead><tr><th>Round</th><th>Buyer</th><th>Seller</th><th>Shares</th><th>Price</th><th>Virtual fees</th></tr></thead><tbody><tr v-for="(trade,i) in shownTrades" :key="i"><td>{{ trade.round }}</td><td>{{ actorName(trade.buyer_id) }}</td><td>{{ actorName(trade.seller_id) }}</td><td>{{ number(trade.quantity) }}</td><td>{{ money(trade.price,currency) }}</td><td>{{ money(trade.fee,currency) }}</td></tr></tbody></table><p v-if="!shownTrades.length" class="stock-empty">No orders crossed for this selection. Unfilled requests have not been counted as trades.</p></div>
+      <p v-if="trades.length > 40" class="stock-subtle">Showing the latest 40 of {{ number(trades.length) }} trades. The JSON export includes every order and fill.</p>
+      <details class="market-assumptions"><summary>Market assumptions and ledger</summary><ul><li v-for="item in current.assumptions" :key="item">{{ item }}</li></ul><dl><div v-for="(value,key) in current.ledger" :key="key"><dt>{{ key.replaceAll('_',' ') }}</dt><dd>{{ typeof value === 'boolean' ? (value ? 'Passed' : 'Failed') : number(value) }}</dd></div></dl></details>
+    </template>
+  </section>
+</template>
+
+<script setup>
+import { computed, ref } from 'vue'
+import { money, number, percent } from '../api/stocklab'
+const props = defineProps({ scenarios: { type: Array, default: () => [] }, reference: Number, currency: {type:String,default:'USD'} })
+const chosen = ref(1), actor = ref('')
+const colors = ['#998348','#ff4f00','#498f8a']
+const current = computed(() => props.scenarios[chosen.value] || props.scenarios[0])
+const bounds = computed(() => { const values = props.scenarios.flatMap(s => s.tape.map(p => p.price)); const lo = Math.min(...values), hi = Math.max(...values), pad = Math.max((hi-lo)*.15, props.reference*.001); return [lo-pad,hi+pad] })
+const ticks = computed(() => Array.from({length:5},(_,i) => bounds.value[0] + (bounds.value[1]-bounds.value[0])*i/4))
+const x = value => 70 + value/(current.value?.tape.at(-1).round || 1)*804
+const y = value => 270 - (value-bounds.value[0])/(bounds.value[1]-bounds.value[0])*250
+const path = tape => tape.map((p,i) => `${i ? 'L' : 'M'} ${x(p.round)} ${y(p.price)}`).join(' ')
+const trades = computed(() => (current.value?.fills || []).filter(t => !actor.value || t.buyer_id === actor.value || t.seller_id === actor.value))
+const shownTrades = computed(() => trades.value.slice(-40).reverse())
+const actorName = id => id.startsWith('liquidity_') ? `Liquidity provider ${Number(id.at(-1))+1}` : current.value.investors.find(p => p.id === id)?.name || id
+</script>
+
+<style scoped>
+.scenario-selector{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}.scenario-selector button{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--research-line);border-radius:5px;padding:9px 14px;font-size:13px;color:#556277;cursor:pointer}.scenario-selector button.active{border-color:#151921;color:#151921}.scenario-selector button span{width:8px;height:8px;border-radius:50%}.market-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:22px 0;border-top:1px solid var(--research-line)}.market-summary div{display:grid;gap:6px}.market-summary span{font-size:12px;color:var(--research-muted)}.market-summary strong{font-size:23px;letter-spacing:-.7px;font-weight:500;font-variant-numeric:tabular-nums}.market-plot svg{width:100%;display:block}.market-plot text{font-family:inherit;font-size:12px;fill:#7b889a}.plot-caption{margin:0 0 20px;text-align:center;font-size:12px}.ledger-status{display:flex;align-items:center;gap:8px;padding:13px 0;border-top:1px solid var(--research-line);border-bottom:1px solid var(--research-line);font-size:12px;color:#44765f;flex-wrap:wrap}.ledger-dot{width:6px;height:6px;border-radius:50%;background:#44765f}.ledger-status span:last-child{margin-left:auto;color:var(--research-muted)}.trades-heading{margin-top:32px}.trades-heading h3{font-size:19px;margin:0}.trades-heading label{display:grid;gap:4px;font-size:12px;color:var(--research-muted)}.trades-heading select{font-size:12px;padding:8px 10px;border:1px solid var(--research-line);border-radius:5px;background:white;color:var(--research-ink);max-width:210px}.market-assumptions{font-size:13px;margin:25px 0}.market-assumptions summary{cursor:pointer}.market-assumptions dl{display:grid;grid-template-columns:1fr 1fr;gap:5px 25px;max-width:600px}.market-assumptions dl>div{display:flex;gap:12px;justify-content:space-between}.market-assumptions dt{color:var(--research-muted)}.market-assumptions dd{margin:0;font-variant-numeric:tabular-nums}
+@media(max-width:650px){.market-summary{grid-template-columns:1fr 1fr;gap:18px}.market-summary strong{font-size:20px}.ledger-status span:last-child{margin-left:0}.market-assumptions dl{grid-template-columns:1fr}.market-plot{overflow-x:auto}.market-plot svg{min-width:520px}}
+</style>

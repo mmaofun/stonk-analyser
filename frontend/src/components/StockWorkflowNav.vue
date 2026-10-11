@@ -1,0 +1,11 @@
+<template><nav class="stock-workflow-nav" aria-label="Stock analysis workflow"><button v-for="(step,index) in steps" :key="step.id" :class="{selected:phase===step.id}" :aria-current="phase===step.id?'step':undefined" :disabled="step.id==='analysis'&&!run||step.id==='results'&&(!run?.verdict||pending)" @click="$emit('step',step.id)"><span>{{ index+1 }}</span><b>{{ step.label }}</b></button></nav></template>
+<script setup>
+import {computed} from 'vue'
+const props=defineProps({run:Object,phase:{type:String,default:'ticker'}})
+defineEmits(['step'])
+const pending=computed(()=>['queued','running','preparing','stopping'].includes(props.run?.status))
+const steps=[{id:'ticker',label:'Stock ticker'},{id:'analysis',label:'Agents analysing'},{id:'results',label:'Results'}]
+</script>
+<style scoped>
+.stock-workflow-nav{display:flex;gap:18px;align-items:center;border-bottom:1px solid var(--research-line);padding:1px 0 17px;margin:0 0 23px}.stock-workflow-nav button{display:flex;align-items:center;gap:9px;flex:1;border:0;background:none;padding:0;min-height:44px;text-align:left;color:#7b8797;font-size:12px;cursor:pointer}.stock-workflow-nav button:not(:last-child):after{content:'';height:1px;flex:1;background:#e1e6ed;margin:0 2px 0 13px}.stock-workflow-nav span{display:grid;place-items:center;border:1px solid #dde4ec;background:#f5f6f8;width:29px;height:29px;border-radius:50%;flex:none;font-size:11px}.stock-workflow-nav b{font-weight:500}.stock-workflow-nav .selected{color:#232c39}.stock-workflow-nav .selected span{color:white;background:var(--research-accent);border-color:var(--research-accent)}.stock-workflow-nav button:disabled{opacity:.4;cursor:default}.stock-dark .stock-workflow-nav button{color:#a4b5c8}.stock-dark .stock-workflow-nav button.selected{color:#eff5fa}.stock-dark .stock-workflow-nav span{background:#142434;border-color:#34485d}.stock-dark .stock-workflow-nav .selected span{background:#f47735;border-color:#f47735;color:#101820}.stock-dark .stock-workflow-nav button:after{background:#2b3b4e}@media(max-width:700px){.stock-workflow-nav{gap:10px;padding-bottom:13px;margin-bottom:18px}.stock-workflow-nav button{font-size:11px;gap:7px;line-height:1.5}.stock-workflow-nav span{width:24px;height:24px}.stock-workflow-nav button:not(:last-child):after{margin-left:3px;min-width:8px}.stock-workflow-nav b{max-width:75px}}
+</style>

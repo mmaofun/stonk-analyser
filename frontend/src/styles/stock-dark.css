@@ -1,0 +1,215 @@
+/* The dark terminal is scoped to Stock Lab; shared chart/research routes retain their styles. */
+.research-shell.modern-research.stock-dark{
+ --research-accent:#f47735;--research-ink:#e4e9ef;--research-muted:#9caabb;--research-line:#293442;--research-soft:#141c27;
+ --stock-surface:#111923;--stock-raised:#16202c;--stock-bg:#0c121b;
+ background:var(--stock-bg);color:var(--research-ink);color-scheme:dark;
+}
+.research-shell.modern-research.stock-dark ::selection{background:#804126;color:#fff}
+.research-shell.modern-research.stock-dark :is(button,a,input,select,textarea,summary):focus-visible{outline-color:#f4935e}
+.research-shell.modern-research.stock-dark .research-sidebar{background:#0f1620;border-color:var(--research-line);width:190px}
+.research-shell.modern-research.stock-dark .research-brand{color:var(--research-ink)!important;font-size:21px;letter-spacing:-.6px;padding:23px 16px}
+.research-shell.modern-research.stock-dark .research-brand em{color:var(--research-accent)}
+.research-shell.modern-research.stock-dark .research-new{background:var(--research-accent);border-color:var(--research-accent);color:#141923;border-radius:6px;font-weight:600}
+.research-shell.modern-research.stock-dark .research-sidebar nav a{color:#a0adbd;background:transparent;font-size:12px}
+.research-shell.modern-research.stock-dark .research-sidebar nav a:hover{background:#19222e;color:#e4e9ef}
+.research-shell.modern-research.stock-dark .research-sidebar nav a.active{color:#ff9a61;background:#f4773512}
+.research-shell.modern-research.stock-dark .research-sidebar nav a.simulation-nav{border-color:var(--research-line)}
+.research-shell.modern-research.stock-dark .sidebar-note{color:#8290a2}
+.research-shell.modern-research.stock-dark .research-content{margin-left:190px;padding:22px 26px 0;max-width:none}
+.research-shell.modern-research.stock-dark .stock-lab{max-width:1600px}
+.research-shell.modern-research.stock-dark .stock-lab.has-run .stock-run-heading{margin:0 0 14px;align-items:center;gap:18px;flex-direction:row}
+.research-shell.modern-research.stock-dark .stock-run-heading>div:first-child{min-width:0}
+.research-shell.modern-research.stock-dark .stock-lab.has-run .stock-run-heading h1{font-size:23px;line-height:1.3;letter-spacing:-.6px;margin:5px 0 7px;color:#e4e9ef}
+.research-shell.modern-research.stock-dark .stock-ticker{color:#f4935e;font-size:12px}
+.research-shell.modern-research.stock-dark .stock-ticker span,.research-shell.modern-research.stock-dark .stock-subtle{color:var(--research-muted)}
+.research-shell.modern-research.stock-dark .stock-run-actions{flex-shrink:0;gap:7px}
+.research-shell.modern-research.stock-dark .stock-secondary{color:#c4ceda;border-color:#344050;background:#141d29;font-size:11px;padding:7px 11px;min-height:32px}
+.research-shell.modern-research.stock-dark .stock-secondary:hover{border-color:#f47735;background:#1d2632}
+.research-shell.modern-research.stock-dark .stock-text-button{color:#f4935e}
+.research-shell.modern-research.stock-dark .stock-primary{background:#f47735;border-color:#f47735;color:#0c121b}
+.research-shell.modern-research.stock-dark .stock-report-navigation{background:#0c121bf5;border-color:var(--research-line);backdrop-filter:blur(12px);margin-bottom:18px;padding-top:0}
+.research-shell.modern-research.stock-dark .stock-report-navigation .stock-tabs{gap:28px}
+.research-shell.modern-research.stock-dark .stock-report-navigation .stock-tabs button{color:#98a7ba;font-size:12px;padding:11px 0;border-bottom-color:transparent}
+.research-shell.modern-research.stock-dark .stock-report-navigation .stock-tabs button.selected{color:#edf0f4;border-bottom-color:#f47735}
+.research-shell.modern-research.stock-dark .stock-subtabs button{color:#9caabb}
+.research-shell.modern-research.stock-dark .stock-subtabs button.selected{color:#ff9a61}
+
+/* One continuous workspace: price context left; population and conversation right. */
+.research-shell.modern-research.stock-dark .swarm-overview{color:var(--research-ink);margin:14px 0 22px}
+.research-shell.modern-research.stock-dark .swarm-overview .overview-heading{gap:12px}
+.research-shell.modern-research.stock-dark .swarm-overview .heading-icon{width:34px;height:34px;flex-basis:34px;background:#f4773514;color:#f4935e;border-radius:8px}
+.research-shell.modern-research.stock-dark .swarm-overview .heading-icon svg{width:20px;height:20px}
+.research-shell.modern-research.stock-dark .swarm-overview .overview-heading h2{font-size:21px;letter-spacing:-.4px;margin-bottom:4px}
+.research-shell.modern-research.stock-dark .swarm-overview .overview-heading p{color:#9caabb;font-size:11px}
+.research-shell.modern-research.stock-dark .swarm-overview .overview-stages{margin:15px 0 12px;gap:10px}
+.research-shell.modern-research.stock-dark .swarm-overview .overview-stages li{color:#8191a5;font-size:10px;line-height:1.5;gap:7px}
+.research-shell.modern-research.stock-dark .swarm-overview .overview-stages li:not(:last-child):after{background:#293442}
+.research-shell.modern-research.stock-dark .swarm-overview .overview-stages span{width:25px;height:25px;flex-basis:25px;border-color:#344252}
+.research-shell.modern-research.stock-dark .swarm-overview .overview-stages .done{color:#bac4d0}
+.research-shell.modern-research.stock-dark .swarm-overview .done span{background:#27313e;border-color:#384353;color:#bac4d0}
+.research-shell.modern-research.stock-dark .swarm-overview .overview-stages .active{color:#f4935e}
+.research-shell.modern-research.stock-dark .swarm-overview .active span{background:#f47735;border-color:#f47735;color:#0c121b}
+.research-shell.modern-research.stock-dark .swarm-overview .playback-toolbar{color:#8393a8;justify-content:flex-start;gap:10px;margin:12px 0;font-size:10px}
+.research-shell.modern-research.stock-dark .swarm-overview .playback-toolbar>span{flex:1;min-width:150px}
+.research-shell.modern-research.stock-dark .swarm-overview .playback-toolbar button{background:#151f2b;border-color:#344252;color:#d9e0e8;font-size:10px;min-height:28px}
+.research-shell.modern-research.stock-dark .swarm-overview .replay-speed{display:flex;align-items:center;gap:3px}
+.research-shell.modern-research.stock-dark .swarm-overview .replay-speed>span{color:#8494a8;margin-right:4px}
+.research-shell.modern-research.stock-dark .swarm-overview .replay-speed button{padding:4px 8px}
+.research-shell.modern-research.stock-dark .swarm-overview .replay-speed button.selected{color:#ffa168;border-color:#865133;background:#f4773512}
+.research-shell.modern-research.stock-dark .swarm-overview .new-message-action{background:#f4773517!important;color:#ffa168!important;border-color:#815139!important}
+.research-shell.modern-research.stock-dark .swarm-overview .overview-workspace{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);grid-template-areas:'chart agents' 'chart messages';gap:12px 18px;align-items:stretch}
+.research-shell.modern-research.stock-dark .swarm-overview .overview-right{border-radius:0}
+.research-shell.modern-research.stock-dark .swarm-overview .overview-chart{border:1px solid #293442;border-radius:8px;background:#111923;padding:15px 15px 7px;align-self:stretch}
+.research-shell.modern-research.stock-dark .swarm-overview .overview-chart .stock-price-context{position:sticky;top:70px}
+.research-shell.modern-research.stock-dark .swarm-overview .without-chart{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:'agents messages'}
+.research-shell.modern-research.stock-dark .swarm-overview .no-participants.overview-workspace{grid-template-columns:minmax(0,1fr);grid-template-areas:'chart'}
+.research-shell.modern-research.stock-dark .stock-price-context header{color:#d7dfe8;margin-bottom:15px;align-items:center}
+.research-shell.modern-research.stock-dark .stock-price-context h2{color:#d7dfe8;font-size:13px;font-weight:600}
+.research-shell.modern-research.stock-dark .stock-price-context header span{color:#8596aa;display:block;margin-top:4px}
+.research-shell.modern-research.stock-dark .price-quote{text-align:right}
+.research-shell.modern-research.stock-dark .price-quote strong{display:block;color:#f0f3f6;font-size:25px;line-height:1.2;font-weight:600;letter-spacing:-.6px;font-variant-numeric:tabular-nums}
+.research-shell.modern-research.stock-dark .price-quote small{font-size:10px;color:#8999ad;display:block;margin-top:5px}
+.research-shell.modern-research.stock-dark .stock-price-context svg{border-radius:4px;border:1px solid #222f3c}
+.research-shell.modern-research.stock-dark .stock-price-context path{stroke:#f0c1a6;stroke-width:1.5}
+.research-shell.modern-research.stock-dark .stock-price-context .volume-bars rect{fill:#9f8877;opacity:.5}
+.research-shell.modern-research.stock-dark .stock-price-context .price-context-note p{color:#8293a8;font-size:10px;line-height:1.7}
+.research-shell.modern-research.stock-dark .stock-price-context .price-context-note p:first-child{color:#c2ccd8;font-size:11px}
+.research-shell.modern-research.stock-dark .stock-price-context .price-context-note span{color:#8798ad;font-size:10px}
+.research-shell.modern-research.stock-dark .price-unavailable{background:#16202c;color:#a9b7c8}
+
+/* A compact population of coloured identities; activity is driven by saved events. */
+.research-shell.modern-research.stock-dark .swarm-mode.playground{border-color:#293442;background:#111923;border-radius:8px;margin-bottom:10px}
+.research-shell.modern-research.stock-dark .swarm-mode.playground:last-child{margin-bottom:0}
+.research-shell.modern-research.stock-dark .swarm-mode>header{padding:12px 14px 10px;border-color:#27313e;align-items:center}
+.research-shell.modern-research.stock-dark .swarm-mode h3{color:#e3e8ee;font-size:13px}
+.research-shell.modern-research.stock-dark .swarm-mode h3 span{background:#273241;color:#bcc8d5;font-size:10px}
+.research-shell.modern-research.stock-dark .swarm-mode header small{color:#8898ad;font-size:10px}
+.research-shell.modern-research.stock-dark .swarm-mode header button{color:#f4935e;font-size:10px}
+.research-shell.modern-research.stock-dark .swarm-mode .playground-scroll{max-height:230px!important;overflow:auto!important;background:radial-gradient(ellipse at 50% 50%,#f4773505,transparent 65%);scrollbar-color:#3b4a5b transparent}
+.research-shell.modern-research.stock-dark .swarm-mode svg{min-height:180px}
+.research-shell.modern-research.stock-dark .swarm-mode .paths path:not(.selected):not(.active){stroke:#718ba3;opacity:.15;stroke-width:.65}
+.research-shell.modern-research.stock-dark .swarm-mode .paths .evidence:not(.selected):not(.active){opacity:.05;stroke:#8295a8;stroke-dasharray:2 6}
+.research-shell.modern-research.stock-dark .swarm-mode .paths .selected{stroke:#f4935e;opacity:.75;stroke-width:1}
+.research-shell.modern-research.stock-dark .swarm-mode .paths .active{stroke:#f4935e;opacity:1;stroke-width:1.2;filter:drop-shadow(0 0 3px #f4773570)}
+.research-shell.modern-research.stock-dark .swarm-mode .paths .reply.selected,.research-shell.modern-research.stock-dark .swarm-mode .paths .reply.active,.research-shell.modern-research.stock-dark .swarm-mode .paths .response.active{stroke:#95c1d4}
+.research-shell.modern-research.stock-dark .swarm-mode .agent-node .node-hit{fill:transparent;stroke:none}
+.research-shell.modern-research.stock-dark .swarm-mode .agent-node .orb{fill:var(--agent-color);stroke:var(--agent-color);stroke-width:.5;filter:drop-shadow(0 0 3px var(--agent-color));opacity:.85}
+.research-shell.modern-research.stock-dark .swarm-mode .agent-node.pending .orb,.research-shell.modern-research.stock-dark .swarm-mode .agent-node.unknown .orb{opacity:.3;filter:none}
+.research-shell.modern-research.stock-dark .swarm-mode .agent-node.failed .orb{fill:#b87569;stroke:#b87569;opacity:.6}
+.research-shell.modern-research.stock-dark .swarm-mode .agent-node .halo{fill:transparent;stroke:transparent;stroke-width:.8}
+.research-shell.modern-research.stock-dark .swarm-mode .agent-node.selected .halo,.research-shell.modern-research.stock-dark .swarm-mode .agent-node:focus .halo{stroke:#f4935e;fill:#f4773510}
+.research-shell.modern-research.stock-dark .swarm-mode .agent-node.selected .orb,.research-shell.modern-research.stock-dark .swarm-mode .agent-node.sender .orb{fill:var(--agent-color);stroke:#fff;stroke-width:1}
+.research-shell.modern-research.stock-dark .swarm-mode .agent-node.partner .orb,.research-shell.modern-research.stock-dark .swarm-mode .agent-node.receiver .orb{fill:var(--agent-color);stroke:#dce6ef;stroke-width:1}
+.research-shell.modern-research.stock-dark .swarm-mode.motion-live .agent-node.running .halo{stroke:var(--agent-color);opacity:.7;animation:swarm-working 2.1s ease-in-out infinite}
+.research-shell.modern-research.stock-dark .swarm-mode .agent-node.responding .halo,.research-shell.modern-research.stock-dark .swarm-mode .agent-node.receiving .halo{stroke:var(--agent-color)}
+.research-shell.modern-research.stock-dark .swarm-mode .node-name{fill:#d7e0eb;font-size:9px;paint-order:stroke;stroke:#111923;stroke-width:3px;stroke-linejoin:round}
+.research-shell.modern-research.stock-dark .swarm-mode .hub circle{r:10;fill:#151f2b;stroke:#334558}
+.research-shell.modern-research.stock-dark .swarm-mode .hub path{stroke:#a3b4c7;transform:scale(.65)}
+.research-shell.modern-research.stock-dark .swarm-mode .hub text{fill:#7c8ea4;font-size:9px}
+.research-shell.modern-research.stock-dark .swarm-mode .packet{fill:#f4935e;stroke:#ffdac6;stroke-width:.4;r:2}
+.research-shell.modern-research.stock-dark .swarm-mode .packet-glow{fill:#f4935e;r:4;opacity:.65}
+.research-shell.modern-research.stock-dark .swarm-mode .packets.reply .packet{fill:#9bc9dc}
+.research-shell.modern-research.stock-dark .swarm-mode footer{background:#101721;border-color:#25303e;color:#96a6ba;font-size:10px;min-height:33px;line-height:1.5;padding:8px 13px}
+.research-shell.modern-research.stock-dark .swarm-mode footer span{overflow-wrap:anywhere}
+.research-shell.modern-research.stock-dark .swarm-mode footer small{color:#74869c;font-size:9px;white-space:nowrap}
+@keyframes swarm-working{50%{opacity:.2;transform:scale(1.35)}}
+
+/* Recorded messages remain readable and independently scrollable beside the chart. */
+.research-shell.modern-research.stock-dark .dm-view{background:#111923;border-color:#293442;border-radius:8px;box-shadow:none}
+.research-shell.modern-research.stock-dark .dm-view>header{border-color:#27313e;padding:11px 14px}
+.research-shell.modern-research.stock-dark .dm-view h3{color:#e3e8ee;font-size:13px}
+.research-shell.modern-research.stock-dark .dm-view header small{color:#8293a8}
+.research-shell.modern-research.stock-dark .dm-view .message-mark{background:#f4773515;color:#f4935e;width:23px;height:23px;border-radius:5px}
+.research-shell.modern-research.stock-dark .dm-view button{color:#f4935e}
+.research-shell.modern-research.stock-dark .dm-view .dm-filter{background:#101721;padding:7px 14px}
+.research-shell.modern-research.stock-dark .dm-view .dm-filter select{background:#182331;border-color:#344353;color:#c1cddb;font-size:10px;padding:5px 7px}
+.research-shell.modern-research.stock-dark .dm-view .dm-filter>span{color:#7f91a7}
+.research-shell.modern-research.stock-dark .dm-view .dm-scroll{max-height:255px;min-height:160px;padding:5px 13px 12px;scrollbar-color:#3b4a5b transparent}
+.research-shell.modern-research.stock-dark .dm-view .dm-scroll li{gap:8px;margin:10px 0}
+.research-shell.modern-research.stock-dark .dm-view .avatar{background:#1b2735;border-color:#3a4a5d;color:#b7c6d7;width:25px;height:25px;flex-basis:25px}
+.research-shell.modern-research.stock-dark .dm-view .message-link{color:#d6e0eb!important;font-size:10px!important}
+.research-shell.modern-research.stock-dark .dm-view .message-link span{color:#9eb1c7}
+.research-shell.modern-research.stock-dark .dm-view .message-meta time{color:#7b8da4;font-size:9px}
+.research-shell.modern-research.stock-dark .dm-view .recipient{color:#8c9eb5;font-size:9px}
+.research-shell.modern-research.stock-dark .dm-view .chat-bubble{background:#17212e;border-color:#2c3a4b;color:#bbc8d8;padding:9px 10px;font-size:11px;line-height:1.65;border-radius:0 6px 6px 6px}
+.research-shell.modern-research.stock-dark .dm-view .reply .chat-bubble{background:#14202c;border-color:#2d465a}
+.research-shell.modern-research.stock-dark .dm-view .disagreement .chat-bubble{background:#201d2a;border-color:#453749}
+.research-shell.modern-research.stock-dark .dm-view .spotlight .chat-bubble{border-color:#9b603f;box-shadow:0 0 0 1px #f4773520}
+.research-shell.modern-research.stock-dark .dm-view .reply.spotlight .chat-bubble{border-color:#568097;box-shadow:0 0 0 1px #75b4d420}
+.research-shell.modern-research.stock-dark .dm-view .chat-bubble summary{color:#f4935e}
+.research-shell.modern-research.stock-dark .dm-view footer{background:#101721;border-color:#27313e;color:#8193aa;padding:8px 14px}
+.research-shell.modern-research.stock-dark .dm-view .dm-empty{color:#99a9bc}
+
+/* The surrounding Stock Lab report uses the same surfaces and preserves its existing content. */
+.research-shell.modern-research.stock-dark .stock-form :is(input,select,textarea){background:#141e2b;border-color:#344252;color:#e1e7ed}
+.research-shell.modern-research.stock-dark .stock-form label,.research-shell.modern-research.stock-dark .stock-structure strong{color:#cad5e1}
+.research-shell.modern-research.stock-dark .stock-start p,.research-shell.modern-research.stock-dark .stock-structure span,.research-shell.modern-research.stock-dark .stock-structure p{color:#94a5ba}
+.research-shell.modern-research.stock-dark :is(.stock-journey,.stock-run-log,.stock-collection-gaps,.stock-evidence-note,.summary-detail,.score-breakdown,.outlook-changes,.stock-source){border-color:#293442;color:#b6c4d5}
+.research-shell.modern-research.stock-dark :is(.stock-journey,.outlook-empty,.framework-pending,.framework-legacy,.resolution-panel,.decision-question,.expectation-basis,.stock-error,.source-review-note,.question-gaps){background:#141d29;border-color:#344050;color:#c5b6aa}
+.research-shell.modern-research.stock-dark :is(.stock-journey,.stock-evidence-resolution,.stock-outlook,.decision-framework,.stock-research,.stock-investors,.stock-market){color:#c5d0dd}
+.research-shell.modern-research.stock-dark :is(.stock-verdict,.verdict-summary,.question-answer,.outlook-summary,.stock-evidence-note p,.stock-research p){color:#c2cedc}
+.research-shell.modern-research.stock-dark :is(.stock-lab h2,.stock-lab h3,.stock-lab h4,.question-cases h4,.opportunity dt,.score-breakdown strong,.outlook-numbers strong,.stock-phase-links strong){color:#e0e7ee}
+.research-shell.modern-research.stock-dark :is(.stock-lab small,.framework-note,.outlook-definition,.question-status,.stock-footer,.stock-source>p,.score-breakdown p,.outlook-numbers p,.stock-run-log summary,.summary-detail summary){color:#91a2b8}
+.research-shell.modern-research.stock-dark :is(.stock-lab table th,.stock-lab table td,.question-cases,.outlook-numbers,.outlook-numbers>div,.score-breakdown article,.opportunity,.stock-journey li){border-color:#293442}
+.research-shell.modern-research.stock-dark :is(.stock-lab table th,.stock-source pre){background:#151e2a;color:#c0cedd}
+.research-shell.modern-research.stock-dark .stock-lab table td{color:#bbc7d7}
+.research-shell.modern-research.stock-dark .stock-source h3 a{color:#f4935e}
+.research-shell.modern-research.stock-dark .stock-source summary{color:#acbbce}
+.research-shell.modern-research.stock-dark .stock-summary-workspace{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.research-shell.modern-research.stock-dark .stock-summary-workspace>.stock-price-context{background:#111923;border:1px solid #293442;border-radius:8px;padding:15px}
+.research-shell.modern-research.stock-dark .stock-journey .journey-number{background:#202c3b;color:#bdc9d7;border-color:#3b4858}
+.research-shell.modern-research.stock-dark .stopped-notice{background:#251d19;color:#e0b9a0;border-color:#a77554}
+.research-shell.modern-research.stock-dark .stock-error{background:#251c18;color:#e4b69a}
+.research-shell.modern-research.stock-dark .stock-header,.research-shell.modern-research.stock-dark .stock-structure{border-color:#293442}
+.research-shell.modern-research.stock-dark .ui-update-notice{background:#1c2633;color:#c8d2de;border-color:#344252}
+
+@media(min-width:1550px){.research-shell.modern-research.stock-dark .research-content{padding:22px 30px 0}.research-shell.modern-research.stock-dark .swarm-overview .overview-workspace{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:12px 20px}.research-shell.modern-research.stock-dark .dm-view .dm-scroll{max-height:275px}}
+@media(max-width:1100px){.research-shell.modern-research.stock-dark .stock-lab.has-run .stock-run-heading{align-items:flex-start;flex-direction:column;gap:8px}.research-shell.modern-research.stock-dark .stock-run-actions{flex-wrap:wrap}.research-shell.modern-research.stock-dark .swarm-overview .overview-stages li{font-size:9px}.research-shell.modern-research.stock-dark .swarm-overview .overview-workspace{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}.research-shell.modern-research.stock-dark .price-quote strong{font-size:21px}.research-shell.modern-research.stock-dark .swarm-overview .overview-chart{padding:12px 10px}.research-shell.modern-research.stock-dark .swarm-mode header button{font-size:9px}.research-shell.modern-research.stock-dark .swarm-mode footer small{white-space:normal}}
+@media(max-width:800px){.research-shell.modern-research.stock-dark .research-sidebar{width:100%;border-bottom-color:#293442}.research-shell.modern-research.stock-dark .research-content{margin-left:0;padding:16px 14px 0}.research-shell.modern-research.stock-dark .research-sidebar nav{border-top-color:#293442}.research-shell.modern-research.stock-dark .stock-lab.has-run .stock-run-heading h1{font-size:21px}.research-shell.modern-research.stock-dark .swarm-overview .overview-workspace,.research-shell.modern-research.stock-dark .swarm-overview .without-chart{grid-template-columns:minmax(0,1fr);grid-template-areas:'chart' 'agents' 'messages'}.research-shell.modern-research.stock-dark .swarm-overview .without-chart{grid-template-areas:'agents' 'messages'}.research-shell.modern-research.stock-dark .swarm-overview .overview-chart .stock-price-context{position:static}.research-shell.modern-research.stock-dark .stock-summary-workspace{grid-template-columns:1fr}.research-shell.modern-research.stock-dark .stock-report-navigation .stock-tabs{gap:17px}.research-shell.modern-research.stock-dark .stock-report-navigation .stock-tabs button{font-size:11px}.research-shell.modern-research.stock-dark .swarm-mode .playground-scroll{max-height:240px!important}.research-shell.modern-research.stock-dark .swarm-overview .overview-stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.research-shell.modern-research.stock-dark .swarm-overview .overview-stages li:after{display:none}}
+@media(max-width:480px){.research-shell.modern-research.stock-dark .swarm-overview .overview-stages{grid-template-columns:1fr 1fr}.research-shell.modern-research.stock-dark .stock-report-navigation .stock-tabs{gap:12px}.research-shell.modern-research.stock-dark .stock-report-navigation .stock-tabs button{font-size:10px}.research-shell.modern-research.stock-dark .stock-run-actions .stock-secondary{padding:7px 9px;font-size:10px}.research-shell.modern-research.stock-dark .swarm-overview .playback-toolbar>span{flex-basis:100%}.research-shell.modern-research.stock-dark .swarm-overview .overview-heading h2{font-size:19px}.research-shell.modern-research.stock-dark .stock-lab.has-run .stock-run-heading h1{font-size:20px}.research-shell.modern-research.stock-dark .dm-view header small{display:none}}
+@media(prefers-reduced-motion:reduce){.research-shell.modern-research.stock-dark .swarm-mode.motion-live .agent-node.running .halo{animation:none}.research-shell.modern-research.stock-dark .swarm-mode .paths .active{filter:none}.research-shell.modern-research.stock-dark .stock-report-navigation{backdrop-filter:none}}
+
+.research-shell.modern-research.stock-dark .research-brand span{white-space:nowrap;font-size:20px}
+.research-shell.modern-research.stock-dark .research-brand img{width:25px;flex:0 0 25px}
+.research-shell.modern-research.stock-dark .evidence-resolution{background:#141d29;border-color:#344252;color:#c2cedc}
+.research-shell.modern-research.stock-dark .evidence-resolution :is(p,small,summary){color:#91a2b8}
+.research-shell.modern-research.stock-dark .stock-forecast{background:#111923;border-color:#293442;color:#d0dbe7}
+.research-shell.modern-research.stock-dark .stock-forecast :is(header p,aside span,.forecast-source,.forecast-reasons p){color:#9eafc3}
+.research-shell.modern-research.stock-dark .stock-forecast :is(.forecast-cases article,.forecast-reasons){border-color:#293442;background:#151e2a}
+.research-shell.modern-research.stock-dark .forecast-cases :is(p,b){color:#9fb0c5}
+.research-shell.modern-research.stock-dark .stock-forecast button,.research-shell.modern-research.stock-dark .forecast-cases summary{color:#f4935e}
+.research-shell.modern-research.stock-dark :is(.investor-workspace,.investor-inspector,.research-area,.market-plot){background:#111923;border-color:#293442;color:#c2cedc}
+.research-shell.modern-research.stock-dark :is(.investor-controls select,.investor-controls input,.investor-picker select,.peer-list button){background:#182332;border-color:#344252;color:#c2cedc}
+.research-shell.modern-research.stock-dark .research-topic-nav button.selected{background:#f4773515;color:#f4935e}
+.research-shell.modern-research.stock-dark :is(.investor-inspector p,.investor-inspector summary,.research-case p,.strategy-conditions dd){color:#b2c1d3}
+.research-shell.modern-research.stock-dark .research-case :is(h4,dt){color:#cbd6e3}
+.research-shell.modern-research.stock-dark .stock-discussion .swarm-overview{margin-top:8px}
+
+.research-shell.modern-research.stock-dark .swarm-overview .overview-right.dual-population{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-content:start}
+.research-shell.modern-research.stock-dark .dual-population .swarm-mode.playground{margin-bottom:0}
+.research-shell.modern-research.stock-dark .dual-population .swarm-mode .playground-scroll{max-height:200px!important}
+.research-shell.modern-research.stock-dark .dual-population .swarm-mode svg{min-height:145px}
+.research-shell.modern-research.stock-dark .dual-population .swarm-mode>header{padding:10px 11px;gap:7px;flex-wrap:wrap}
+.research-shell.modern-research.stock-dark .dual-population .swarm-mode footer{font-size:9px;min-height:38px;gap:4px;flex-wrap:wrap;padding:7px 10px}
+.research-shell.modern-research.stock-dark .dual-population+.overview-messages .dm-scroll{max-height:190px}
+@media(max-width:1100px){.research-shell.modern-research.stock-dark .dual-population .swarm-mode header button{display:none}}
+@media(max-width:480px){.research-shell.modern-research.stock-dark .swarm-overview .overview-right.dual-population{gap:7px}.research-shell.modern-research.stock-dark .dual-population .swarm-mode h3{font-size:11px}.research-shell.modern-research.stock-dark .dual-population .swarm-mode header small{font-size:9px}.research-shell.modern-research.stock-dark .dual-population .swarm-mode footer small{display:none}}
+
+/* Detail views retain their labelled agents on the same dark surfaces. */
+.research-shell.modern-research.stock-dark .playground{background:#111923;border-color:#293442}
+.research-shell.modern-research.stock-dark .playground>header,.research-shell.modern-research.stock-dark .playground footer{border-color:#27313e}
+.research-shell.modern-research.stock-dark .playground h3{color:#e3e8ee}
+.research-shell.modern-research.stock-dark .playground h3 span{background:#273241;color:#bcc8d5}
+.research-shell.modern-research.stock-dark .playground header small,.research-shell.modern-research.stock-dark .playground footer{color:#91a2b8}
+.research-shell.modern-research.stock-dark .playground header button{color:#f4935e}
+.research-shell.modern-research.stock-dark .playground-scroll{background:radial-gradient(ellipse at center,#f4773505,transparent 65%);scrollbar-color:#3b4a5b transparent}
+.research-shell.modern-research.stock-dark .playground:not(.swarm-mode) .orb{fill:#192738;stroke:#718ca7}
+.research-shell.modern-research.stock-dark .playground:not(.swarm-mode) .agent-node.selected .orb{fill:#3c281d;stroke:#f4935e}
+.research-shell.modern-research.stock-dark .playground:not(.swarm-mode) .agent-node.partner .orb,.research-shell.modern-research.stock-dark .playground:not(.swarm-mode) .agent-node.receiver .orb{fill:#1c3346;stroke:#82b4d5}
+.research-shell.modern-research.stock-dark .playground:not(.swarm-mode) .node-name{fill:#aebed2}
+.research-shell.modern-research.stock-dark .playground:not(.swarm-mode) foreignObject{color:#bfd0df}
+.research-shell.modern-research.stock-dark .playground:not(.swarm-mode) .member-number{fill:#8da2ba}
+.research-shell.modern-research.stock-dark .playground:not(.swarm-mode) .hub circle{fill:#1b2735;stroke:#41546a}
+.research-shell.modern-research.stock-dark .playground:not(.swarm-mode) .hub text{fill:#8ea1b8}
+.research-shell.modern-research.stock-dark .scenario-selector button,.research-shell.modern-research.stock-dark .stock-market select{background:#15202e;border-color:#344252;color:#b8c8da}
+.research-shell.modern-research.stock-dark .scenario-selector button.active{background:#f4773512;border-color:#ad6d46;color:#f4a16f}

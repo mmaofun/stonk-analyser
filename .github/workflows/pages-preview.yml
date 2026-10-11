@@ -1,0 +1,68 @@
+name: GitHub Pages project preview
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages-preview
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      pages_ready: ${{ steps.pages.outputs.result }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Install frontend dependencies
+        run: npm ci --prefix frontend
+      - name: Test preview profiles and scenarios
+        run: npm test --prefix frontend
+      - name: Build the static preview
+        working-directory: frontend
+        env:
+          VITE_DEPLOYMENT_MODE: preview
+          VITE_API_BASE_URL: ''
+          VITE_SOURCE_REPOSITORY_URL: https://github.com/${{ github.repository }}
+        run: |
+          repo="${GITHUB_REPOSITORY##*/}"
+          base="/$repo/"
+          if [[ "$repo" == *.github.io ]]; then base="/"; fi
+          npm run build -- --mode pages --base "$base"
+          touch dist/.nojekyll
+          node ../scripts/check_preview.mjs dist
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend/dist
+      - name: Check whether Pages has been enabled
+        id: pages
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const {data} = await github.rest.repos.get(context.repo);
+            if (!data.has_pages) {
+              await core.summary.addRaw('Preview built successfully. Enable Settings → Pages → Source → GitHub Actions, then run this workflow again.').write();
+            }
+            return data.has_pages;
+  deploy:
+    needs: build
+    if: needs.build.outputs.pages_ready == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - name: Deploy preview
+        id: deployment
+        uses: actions/deploy-pages@v4

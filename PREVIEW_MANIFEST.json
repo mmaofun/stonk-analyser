@@ -1,0 +1,765 @@
+{
+  "purpose": "Static preview source for mmaofun/stonk-analyser; no backend or private reports",
+  "files": [
+    {
+      "path": ".github/workflows/pages-preview.yml",
+      "sha256": "b853d34af44cc1f5f0b253363f8517079379580cfa40207a59493650550f6fba",
+      "bytes": 2160
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "b5bee37286ccddba54f8c427a8fa8993b4e79189b7516898fe2f73bbc0e71b2e",
+      "bytes": 72
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+      "bytes": 34523
+    },
+    {
+      "path": "README.md",
+      "sha256": "82bc0b6035aab0ef6c394dd54f15ec9d1f72df72f5f4f51b1ebd8153dd231ec5",
+      "bytes": 1578
+    },
+    {
+      "path": "frontend/.env.pages",
+      "sha256": "8a80b4daad6afca343690078490e655a02a900a845f23dbd722ae4360f4c4aea",
+      "bytes": 123
+    },
+    {
+      "path": "frontend/index.html",
+      "sha256": "18750938323c2ad792a2f59f4316fd383c6a2870c3bd6188d996d3fa5c768397",
+      "bytes": 995
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "sha256": "a452904cf2d1aa785ff54b12411c7a1c50d9fc4cf910737f378cd7e45b5bbc18",
+      "bytes": 78563
+    },
+    {
+      "path": "frontend/package.json",
+      "sha256": "db6672a7fcec98eb980f37def0719695e11b5cba58670152a4ae2147ad394368",
+      "bytes": 631
+    },
+    {
+      "path": "frontend/public/brand/mmaofun-mark.png",
+      "sha256": "d3d4baf70bbddc8c146f73d608e96e610c7f75813478c9a63509bde983765d97",
+      "bytes": 305745
+    },
+    {
+      "path": "frontend/public/icon.png",
+      "sha256": "2b2c19d0400056000bb88636410c71c39ec3bc6b9cc871d6b022adf8cddb6e7a",
+      "bytes": 30341
+    },
+    {
+      "path": "frontend/src/App.vue",
+      "sha256": "f183bcfb3900c3624490cacda0959b9f1106c7df00f4f51039177f1253766fc1",
+      "bytes": 722
+    },
+    {
+      "path": "frontend/src/api/graph.js",
+      "sha256": "7198f855b617c496d4a380a78a09b15ba16619c64d48775faf67670b2ef8092a",
+      "bytes": 1376
+    },
+    {
+      "path": "frontend/src/api/index.js",
+      "sha256": "65f6e63e7edaf3d35712e0a76453ac9024dfaec87181a698c3bef3da2c4eab89",
+      "bytes": 2059
+    },
+    {
+      "path": "frontend/src/api/platform.js",
+      "sha256": "508c64f55fd53c1221c48e444959b8e8560004b793b67fb068f2b95d8f8fcdc8",
+      "bytes": 5713
+    },
+    {
+      "path": "frontend/src/api/report.js",
+      "sha256": "8ea9f0aa09eaa19dd66d825d9252bb2d3fc92e79e541aa5320ce03edd43bf58e",
+      "bytes": 1305
+    },
+    {
+      "path": "frontend/src/api/research.js",
+      "sha256": "fb1f409869363f753a26e7109e10ce2b35ce88943463f74daf9aa3f175f2fb6f",
+      "bytes": 972
+    },
+    {
+      "path": "frontend/src/api/simulation.js",
+      "sha256": "ddc3acb9059dc3c28d9a852f64e3a15d8e6cbb89934137463d9d66068493e9e6",
+      "bytes": 5499
+    },
+    {
+      "path": "frontend/src/api/stocklab.js",
+      "sha256": "953aebe75321da0ec8dc77f418e606c5290c1dee244342180ccfdd3163b954fa",
+      "bytes": 1142
+    },
+    {
+      "path": "frontend/src/assets/logo/MiroFish_logo_compressed.jpeg",
+      "sha256": "f2289e76f26f6258e93d08ba10d1cb3ce72dd8663edc7e0efbe0a29ae2128333",
+      "bytes": 180620
+    },
+    {
+      "path": "frontend/src/assets/logo/MiroFish_logo_left.jpeg",
+      "sha256": "cd3b5a96932368265e66e456de0bb68fc56cdca605bfa148c10e913af33fea6b",
+      "bytes": 600901
+    },
+    {
+      "path": "frontend/src/components/AccountChallenge.vue",
+      "sha256": "8e139dd8df9b8cd5fdf806988c103e3d5131ee1ca3ec613e11c05eac7e64c22a",
+      "bytes": 2152
+    },
+    {
+      "path": "frontend/src/components/AgentConversationRoom.vue",
+      "sha256": "b1768676d06399563780009473c47e6fbf62ffd27110cd1decaf4b8d6127cf72",
+      "bytes": 34218
+    },
+    {
+      "path": "frontend/src/components/AgentInteractionGraph.vue",
+      "sha256": "3a734524b6f619d59d57b8e054b73707c63089ca98786f83d22e28a7b523fd1a",
+      "bytes": 40290
+    },
+    {
+      "path": "frontend/src/components/AgentMessageView.vue",
+      "sha256": "ae397ce8d9f5c536d99bf00a04cda67b4331617e3ea9a4ddc262492a8c282489",
+      "bytes": 6974
+    },
+    {
+      "path": "frontend/src/components/AgentPlayground.vue",
+      "sha256": "8b669684c9b2c12680e7482d2f0f58b66f8364d99ca3233cb40e96a7826eb6ef",
+      "bytes": 15583
+    },
+    {
+      "path": "frontend/src/components/AnalysisJourney.vue",
+      "sha256": "e994d1cb285534347d40e908a538bdfcafb6d49d188760f99428559ca3c0d5b6",
+      "bytes": 2485
+    },
+    {
+      "path": "frontend/src/components/AnalysisOverview.vue",
+      "sha256": "44bb769d465e9201bb5d376ddca1f688f4d36ea87f9d69b29ea0c36b454dbb1c",
+      "bytes": 13392
+    },
+    {
+      "path": "frontend/src/components/AnalysisProgress.vue",
+      "sha256": "4bf1fc8971b62616634f0b01b9c26ad3a471344e938e4d15c4d757ecb62b0445",
+      "bytes": 15810
+    },
+    {
+      "path": "frontend/src/components/AnalystRoleIcon.vue",
+      "sha256": "68093eb171e5421f043aa8e9e73b105777a040abdf58de81376a900322167fa0",
+      "bytes": 3685
+    },
+    {
+      "path": "frontend/src/components/AssessmentSummary.vue",
+      "sha256": "c9031688c9df9aa1a9447d1ca95cb1c6417040ecb8d9e286f0eed703409f1670",
+      "bytes": 3411
+    },
+    {
+      "path": "frontend/src/components/ChartAnalysisPage.vue",
+      "sha256": "aa1756e93b33e6ce221caf2ec5421a5afb78e050cfaf47af75fe226210d840c4",
+      "bytes": 2358
+    },
+    {
+      "path": "frontend/src/components/ChartPlanReference.vue",
+      "sha256": "a71cdab2e2a394e72390b6390d7f28ba5ff03406b49bdd17c6d545e570e67dea",
+      "bytes": 10359
+    },
+    {
+      "path": "frontend/src/components/ChartPlanResults.vue",
+      "sha256": "4c6022906df8c0bb5ede161ccc4f9d67c133d74e13df7ac9a7edbd24a778362a",
+      "bytes": 29961
+    },
+    {
+      "path": "frontend/src/components/ChartSource.vue",
+      "sha256": "8a084fea62fdc7ff5b23ddf913af8554bdd87425d9895b3a7d279cea32d4b760",
+      "bytes": 7368
+    },
+    {
+      "path": "frontend/src/components/ChartSwarmCanvas.vue",
+      "sha256": "38b5449b78b67af3db8c5c7a2121f0247f417a31861f7b95e6f91e4f99ac9f44",
+      "bytes": 9845
+    },
+    {
+      "path": "frontend/src/components/ChartSwarmDiscussion.vue",
+      "sha256": "072285a57e96ded8b6ca76b5252056cf2ac92e7b83a5f3beeca85747a72753b5",
+      "bytes": 7586
+    },
+    {
+      "path": "frontend/src/components/ChartSwarmMessages.vue",
+      "sha256": "d584179cbb690ef562c934e36ac7a194b906c4ca748c96a57e9da266805d6ebb",
+      "bytes": 8651
+    },
+    {
+      "path": "frontend/src/components/ChartWorkflowNav.vue",
+      "sha256": "3980df76a06b0dd37933d646db476cfd4ca6db6e0cbbe2604404e23bfb9f661b",
+      "bytes": 1663
+    },
+    {
+      "path": "frontend/src/components/ConditionalActionPaths.vue",
+      "sha256": "3de33fef448e296fc1cb7f73fb6351de8454496bbd656d6197451846fa90fdf3",
+      "bytes": 8968
+    },
+    {
+      "path": "frontend/src/components/DiscussionWorkspace.vue",
+      "sha256": "e5cd1876f760a239f7f26c63195dec553759054bc157315014836c7b8d556c94",
+      "bytes": 21936
+    },
+    {
+      "path": "frontend/src/components/ExchangeMessage.vue",
+      "sha256": "9ad47112b695013ed7cfba32e3b3d00a083c8b1312930b88e5dfe67e7da55ea4",
+      "bytes": 2676
+    },
+    {
+      "path": "frontend/src/components/GraphPanel.vue",
+      "sha256": "10f297a24b93155adee025f043a10813298738cb39f127af5d67deb669af0468",
+      "bytes": 39792
+    },
+    {
+      "path": "frontend/src/components/HistoryDatabase.vue",
+      "sha256": "5689a7f8ab62d0abecea9330f7395c68895da3612feded54bcff2c016089a888",
+      "bytes": 34970
+    },
+    {
+      "path": "frontend/src/components/LanguageSwitcher.vue",
+      "sha256": "ada45b2c551c6e818791dfc495ffd492c9d6d9cd6a65a713a08ca9ecc4dedd58",
+      "bytes": 2595
+    },
+    {
+      "path": "frontend/src/components/MarketAgentMap.vue",
+      "sha256": "fb5511147e14590728ce609bbc1ee9b3a63a211087fa2f56a68f744b7cbc0d04",
+      "bytes": 5616
+    },
+    {
+      "path": "frontend/src/components/MarketPopulation.vue",
+      "sha256": "3df3d1fbb3460c15f16d4a20cca0498316ce116c2d8cc056e0a0ad722017b9ae",
+      "bytes": 14241
+    },
+    {
+      "path": "frontend/src/components/PlanAccess.vue",
+      "sha256": "f34fd74a8f0ee0466be6324813e4724bd84eafab75d21067fbe4cdc738327d56",
+      "bytes": 2666
+    },
+    {
+      "path": "frontend/src/components/PreviewChart.vue",
+      "sha256": "5b3e07f9b3d20015eb718b67d5dc007d14e2f75ee81e4aa6b09f7fd574a4e026",
+      "bytes": 1766
+    },
+    {
+      "path": "frontend/src/components/PriceActionReadiness.vue",
+      "sha256": "da8bc19c24b279272d3d75446e855c46c5ee6866f0e96c75349de8029e39bcb4",
+      "bytes": 4126
+    },
+    {
+      "path": "frontend/src/components/ResearchIcon.vue",
+      "sha256": "80b748bb5cb624bf547050140b63b25424b0181632c3767d50f5d6c59dbd56b5",
+      "bytes": 1059
+    },
+    {
+      "path": "frontend/src/components/ResearchShell.vue",
+      "sha256": "db217628155046b963c22b30f6378c1282219846a1e32a03ac0f4b1757b35261",
+      "bytes": 6716
+    },
+    {
+      "path": "frontend/src/components/ResearchTools.vue",
+      "sha256": "5fa7774a76e47bbef7b19ceac4e472c714fa2f74df1c2ec858fa8cf77674eb61",
+      "bytes": 11503
+    },
+    {
+      "path": "frontend/src/components/SavedAnalyses.vue",
+      "sha256": "5a08b2a03da0c51adb4f0574b8b33276307e073bc7683d5abf1fa26b4fede8f8",
+      "bytes": 5188
+    },
+    {
+      "path": "frontend/src/components/SavedSimulationReport.vue",
+      "sha256": "535b2b4c88df7f1cb0d0a1e8014e1d87a45f120f55591e89ccf1e0cbf8e1b543",
+      "bytes": 5276
+    },
+    {
+      "path": "frontend/src/components/Step1GraphBuild.vue",
+      "sha256": "8f2c1110347230e81b1add0441afc45948ae8632c73816cb71ee174c34200255",
+      "bytes": 18521
+    },
+    {
+      "path": "frontend/src/components/Step2EnvSetup.vue",
+      "sha256": "d1df19add47b4d8e8a7608bfabe7c92e71e0b4fe8459f78460c51a26bd021f97",
+      "bytes": 70357
+    },
+    {
+      "path": "frontend/src/components/Step3Simulation.vue",
+      "sha256": "c14043b7d3b2885acc81e350a98d45dace276d7ac8d53d5fd9009614fab62b8f",
+      "bytes": 39895
+    },
+    {
+      "path": "frontend/src/components/Step4Report.vue",
+      "sha256": "dcac96bdcb6b8df566155b543387cb51034e341f235a83b455608e34abd6bb4c",
+      "bytes": 145867
+    },
+    {
+      "path": "frontend/src/components/Step5Interaction.vue",
+      "sha256": "067f165535e5b6583515ed30d9eb97727c273a410b81e0b7e95886bdb37d9541",
+      "bytes": 64172
+    },
+    {
+      "path": "frontend/src/components/StockAgentRating.vue",
+      "sha256": "db1b3593a33dbb13553cfb93dfec94b5b475e5e8d02800a00fa6a41105ea7b12",
+      "bytes": 4553
+    },
+    {
+      "path": "frontend/src/components/StockAnalysisPage.vue",
+      "sha256": "acc13f46dc0ac66885e872f91f12f81ec625ef4993b470447b5373a51a0407e1",
+      "bytes": 2901
+    },
+    {
+      "path": "frontend/src/components/StockDecisionFramework.vue",
+      "sha256": "7c0fd8ea04387007e04c13ab802adc776b155728a3e3f37932556c31a51d0f07",
+      "bytes": 13043
+    },
+    {
+      "path": "frontend/src/components/StockEvidenceResolution.vue",
+      "sha256": "79b0748f0ec563e1e9eb65f56ede9fd473026d2a2b84922fdf3a1d281305739c",
+      "bytes": 6368
+    },
+    {
+      "path": "frontend/src/components/StockEvidenceText.vue",
+      "sha256": "b76be75adfbb41b4ea8504d7275cf0d66c9f64cac5a634ff1cd6a76462177450",
+      "bytes": 1512
+    },
+    {
+      "path": "frontend/src/components/StockForecastSummary.vue",
+      "sha256": "3c206376e35379477c989be5de214ba9cd78518859219c139886fa58d01ec95f",
+      "bytes": 4460
+    },
+    {
+      "path": "frontend/src/components/StockInvestorConversation.vue",
+      "sha256": "efb4afcd5adc04844549630f4b78ee346a4c04348dc82adaf61f308395b0a248",
+      "bytes": 844
+    },
+    {
+      "path": "frontend/src/components/StockInvestors.vue",
+      "sha256": "0abe2661f025c5fe41aeb1fe164fc5f2a19874106a8530be96f62091e788a9ea",
+      "bytes": 13207
+    },
+    {
+      "path": "frontend/src/components/StockJourney.vue",
+      "sha256": "fd98354f05b2520e79bddaa0677825534195979de9643b404e1552eeaaf2a5ae",
+      "bytes": 3986
+    },
+    {
+      "path": "frontend/src/components/StockMarket.vue",
+      "sha256": "f013f62c0e8bd5a87f753a3805222c39e065d77ad8fe8e70e040cf52a9fc2b34",
+      "bytes": 7823
+    },
+    {
+      "path": "frontend/src/components/StockOutlook.vue",
+      "sha256": "600b4abd66d107b0c6f6c0a463d995a85041d5ed6598c862bc5e4cf688de9f74",
+      "bytes": 14670
+    },
+    {
+      "path": "frontend/src/components/StockPriceContext.vue",
+      "sha256": "958edea8b93a1238225a9ded57bbf8bd07aa4052984f08a7e292fdf093a39b0a",
+      "bytes": 3751
+    },
+    {
+      "path": "frontend/src/components/StockProjection.vue",
+      "sha256": "afdcd005549abae68e1c1822a07d16df70d50fe7c17178b05f61f3ff383f2d7f",
+      "bytes": 7470
+    },
+    {
+      "path": "frontend/src/components/StockResearch.vue",
+      "sha256": "fa9a62cc157f78c6c69ec4204d98b3da3b09b24aebce5e59a2d8cf112b4a1da4",
+      "bytes": 9172
+    },
+    {
+      "path": "frontend/src/components/StockResearchGraph.vue",
+      "sha256": "16bcab318920a68dc9cdeea56db4f24e9f3f317d3139f42a01ab5056302176d0",
+      "bytes": 7678
+    },
+    {
+      "path": "frontend/src/components/StockResults.vue",
+      "sha256": "4edb3cf321428780befa46ab09e8742b8d2c603cf8660d025ad43d3f0b527ac9",
+      "bytes": 7989
+    },
+    {
+      "path": "frontend/src/components/StockSourceLinks.vue",
+      "sha256": "18821e975db86c2fee8124d6efe8b97651b04dcfddfb318aa264b2e2c881646f",
+      "bytes": 886
+    },
+    {
+      "path": "frontend/src/components/StockSwarmCanvas.vue",
+      "sha256": "27f71194e5650440be12ce56133de21b1863752703ca31f85f7b4de1a9b4836c",
+      "bytes": 9866
+    },
+    {
+      "path": "frontend/src/components/StockSwarmDiscussion.vue",
+      "sha256": "ef75425dcfce5effe28fb4104b517987d3643fb638a5135a91680c61455b59fd",
+      "bytes": 7744
+    },
+    {
+      "path": "frontend/src/components/StockSwarmMessages.vue",
+      "sha256": "5bdc8c4c9830ea520ab272cad68d274189f692eeb85427664d4cbb333240945a",
+      "bytes": 9194
+    },
+    {
+      "path": "frontend/src/components/StockWorkflowNav.vue",
+      "sha256": "4c70d1f19617a7aa0548a9d438aabc476ce56d161d40bdfbe35050615eec82ad",
+      "bytes": 2360
+    },
+    {
+      "path": "frontend/src/components/TradeAssessment.vue",
+      "sha256": "388c138a7552c18ce49d87e1053ecd55659748e464b1b24b1bd61cdc75affc1e",
+      "bytes": 15280
+    },
+    {
+      "path": "frontend/src/components/TradeExitPlanner.vue",
+      "sha256": "5aaa32b25c51b0612252149c1d747b853f4784415c0176e83f4d2c164c997950",
+      "bytes": 16025
+    },
+    {
+      "path": "frontend/src/components/TradeLevelsOverlay.vue",
+      "sha256": "b4bfdc3e66d493d08e8ae2ecd102fdfb597797f6338ffa5b9a47eeebd7133818",
+      "bytes": 3800
+    },
+    {
+      "path": "frontend/src/components/TraderCouncil.vue",
+      "sha256": "dd62a88fbc5f8d8d3bcc127025fc62b9129d7f67af0a280d4f74708148938939",
+      "bytes": 9806
+    },
+    {
+      "path": "frontend/src/components/TraderMemory.vue",
+      "sha256": "4f1956968ac7fb4f20b6ce3fd6951579d4b8d1be07a12ec69aea9f4eb2fa20de",
+      "bytes": 6561
+    },
+    {
+      "path": "frontend/src/components/UiUpdateNotice.vue",
+      "sha256": "d78f2bed70e22d9eb9ca25b8bd70e31fb156796fcbfcb04f34defc9844aa6b5b",
+      "bytes": 2613
+    },
+    {
+      "path": "frontend/src/i18n/index.js",
+      "sha256": "8880da51c8590b116557106a50151af0e5c3ae33d6818c65af3b05067b250020",
+      "bytes": 673
+    },
+    {
+      "path": "frontend/src/main.js",
+      "sha256": "49f1fdbf7a63e2ba703674c30e2df42929276e96857445f23a3ac5ba5dfc8d94",
+      "bytes": 194
+    },
+    {
+      "path": "frontend/src/router/index.js",
+      "sha256": "0c3b048d98a0b9d3df9091ee357e2c7b6dbe516c0ac94c074209978a952c7ff3",
+      "bytes": 4625
+    },
+    {
+      "path": "frontend/src/store/pendingUpload.js",
+      "sha256": "87afee2b8780ed05d80810c4517c93b6245eece5e3217f55c598436b5ef4cc64",
+      "bytes": 849
+    },
+    {
+      "path": "frontend/src/styles/launch.css",
+      "sha256": "b66b37714bb489826cb61789f9c6444c39233b833c6cd5c6c1c2707217c4dab3",
+      "bytes": 3679
+    },
+    {
+      "path": "frontend/src/styles/research.css",
+      "sha256": "6ead41340adaa0c1b057a9bb3980da45f0717d959740f17b4deae09397bc146f",
+      "bytes": 20659
+    },
+    {
+      "path": "frontend/src/styles/stock-dark.css",
+      "sha256": "bfc035ac38a86ce286a3fd4a27338679d8ff3d644b5b1e3807be0b676e8bfa28",
+      "bytes": 29370
+    },
+    {
+      "path": "frontend/src/utils/agentGraph.mjs",
+      "sha256": "922b96a0dc1a148ac19545eca68b13a87f23dbcd161b2c9a82b9f135fa4db36c",
+      "bytes": 14620
+    },
+    {
+      "path": "frontend/src/utils/agentInteraction.mjs",
+      "sha256": "cf300a045127abdb06509aec412d4c34723d0ac453dbc1522cbf7212f3339bdf",
+      "bytes": 3126
+    },
+    {
+      "path": "frontend/src/utils/analysisFlow.mjs",
+      "sha256": "d50cda464a12f45dd34090a00efd7c0ea11e3ec130887c9899f4b9bf436d6fe4",
+      "bytes": 9436
+    },
+    {
+      "path": "frontend/src/utils/analysisOverview.mjs",
+      "sha256": "b56113cdda5d36bfe38580a7c210cc7a27c56ab3b58d1df3d540872ff42c2cd4",
+      "bytes": 1560
+    },
+    {
+      "path": "frontend/src/utils/analysisRecovery.mjs",
+      "sha256": "3509cdfb9abb08b3b806352d703d8921392445d8097fe770e4b42d624713fe3a",
+      "bytes": 1264
+    },
+    {
+      "path": "frontend/src/utils/analysisResponses.mjs",
+      "sha256": "7fc61501bffa9d1ccc7ae71f31a0e49406422628fbca1a6ded2995bdc0e88bd5",
+      "bytes": 2837
+    },
+    {
+      "path": "frontend/src/utils/availableEvidence.mjs",
+      "sha256": "e7d2693b5e0fb8410757da2991077158ffb525b66bb5031dddf6aeffb7603d99",
+      "bytes": 1034
+    },
+    {
+      "path": "frontend/src/utils/chartSwarmGeometry.mjs",
+      "sha256": "16eef69e47067fadf00ea5a28ba72d26d427b9da511ed0add1542f72244270b9",
+      "bytes": 1199
+    },
+    {
+      "path": "frontend/src/utils/chartWorkspace.mjs",
+      "sha256": "b4bf30f853747299554c52bacd445cf9f0fd1e39a216c66450a83d2127bc3d83",
+      "bytes": 1993
+    },
+    {
+      "path": "frontend/src/utils/conversationScene.mjs",
+      "sha256": "8af2a9e16e457327965dd7de293e59dc480156218fc9ed60781d2736ce6dc04f",
+      "bytes": 6008
+    },
+    {
+      "path": "frontend/src/utils/discussionWorkspace.mjs",
+      "sha256": "d9f6f4d646289d22f4fe46c7e790facbbed4654703d30ddd797f3b16b1714d56",
+      "bytes": 4958
+    },
+    {
+      "path": "frontend/src/utils/evidenceResolutionView.mjs",
+      "sha256": "b4f6701f1b400d40f6cc23ad4ef70145e7c7a89f4a80a639711ac1782862fb72",
+      "bytes": 2347
+    },
+    {
+      "path": "frontend/src/utils/participantSelection.mjs",
+      "sha256": "29c9d560445d705eb10e8fe0611b1d886e161e9b35bce17109a715e1fcd48d74",
+      "bytes": 378
+    },
+    {
+      "path": "frontend/src/utils/payoffPolicy.mjs",
+      "sha256": "648f79c66d05f4d16f5207935b3685a4e1b558dab2d61fedebb38315ac688a6b",
+      "bytes": 4224
+    },
+    {
+      "path": "frontend/src/utils/plans.mjs",
+      "sha256": "0f5dd1bc716eed588fa8ce3976cb26c1001d0196b023ef95b6a760a4aeebf55a",
+      "bytes": 884
+    },
+    {
+      "path": "frontend/src/utils/platform.mjs",
+      "sha256": "49dd992478023cd6aefdbde119bf96cc1ffef379d289003ded8b3fbed4de8b1b",
+      "bytes": 3458
+    },
+    {
+      "path": "frontend/src/utils/playground.mjs",
+      "sha256": "475e65512742dfc086ed74d57ad1e4e02e493694db418f46f33cc6eaf0b5f030",
+      "bytes": 3467
+    },
+    {
+      "path": "frontend/src/utils/presentationGraphs.mjs",
+      "sha256": "21a2040c1b79a573c683a8ad33ca91a7c36de6f8ce222f6a7bbd72b524463157",
+      "bytes": 1713
+    },
+    {
+      "path": "frontend/src/utils/previewReports.mjs",
+      "sha256": "f5f739b2b78f266937dd2221a60958eecd967a268a36477152a0df19035df092",
+      "bytes": 8735
+    },
+    {
+      "path": "frontend/src/utils/privateImages.js",
+      "sha256": "481612378116b16ddbc77a0e1cc93de2726afc9ff2e314f79542a861a137b5a9",
+      "bytes": 1435
+    },
+    {
+      "path": "frontend/src/utils/researchNavigation.mjs",
+      "sha256": "017c1754004b152a709ff282743e1a28f9795abb1df4500f58701865661434ea",
+      "bytes": 763
+    },
+    {
+      "path": "frontend/src/utils/researchRecords.mjs",
+      "sha256": "95d122507951748325e332d93120ab03ed1fc12a35e2fadbc4d0cc0f77ce8a11",
+      "bytes": 3668
+    },
+    {
+      "path": "frontend/src/utils/safeMarkdown.mjs",
+      "sha256": "30f4f0aaab226f73d1d6e6abf35443c5d470f08413d86519d8369bc7298d4a16",
+      "bytes": 1426
+    },
+    {
+      "path": "frontend/src/utils/scenarioPresentation.mjs",
+      "sha256": "05b3ae4a98a39d0d20d172ae74700af3d42875d7bdf877cf919f2d894a43d435",
+      "bytes": 4212
+    },
+    {
+      "path": "frontend/src/utils/stockAnalysisOverview.mjs",
+      "sha256": "298ebe13d5dcddc48b213ec3fd5f33747965fd536b0a6d4f18f86532073904e0",
+      "bytes": 5550
+    },
+    {
+      "path": "frontend/src/utils/stockCurrency.mjs",
+      "sha256": "4861e96f733baccf917e51173ddb8c5878437391b41dd47ed2c912c35f44e357",
+      "bytes": 194
+    },
+    {
+      "path": "frontend/src/utils/stockFlow.mjs",
+      "sha256": "848b04d50f32a81faf7ff9c6b04a29c29504eef6cc19d43e63616d8a66325653",
+      "bytes": 4542
+    },
+    {
+      "path": "frontend/src/utils/stockForecast.mjs",
+      "sha256": "7d3b61277e1ad9a65c915e7a8281990fe9b9da8dceb54160e7dab34d4d3cb0c3",
+      "bytes": 2210
+    },
+    {
+      "path": "frontend/src/utils/stockFramework.mjs",
+      "sha256": "c531e281dd933493214637b14175b8957c367c9651b5616e38f3d74efd9a4792",
+      "bytes": 592
+    },
+    {
+      "path": "frontend/src/utils/stockResultsView.mjs",
+      "sha256": "8340939e5aee1ac6175c2c804aebae3835eec0eaf856498937883db8ffab3f9f",
+      "bytes": 8507
+    },
+    {
+      "path": "frontend/src/utils/stockSwarm.mjs",
+      "sha256": "206281fb615c2bc12315decc768bb6723fc3d64df116931c3a266735a106cb4e",
+      "bytes": 4652
+    },
+    {
+      "path": "frontend/src/utils/tradeDecision.mjs",
+      "sha256": "a464daedf639fca43d1177ff7470c6fd049bbc28c48aece135b7bc2bf4c21ff8",
+      "bytes": 4161
+    },
+    {
+      "path": "frontend/src/utils/tradeExitPlan.mjs",
+      "sha256": "baf6da57a9b210aefeb58140555a9b94eade8b4e9136f4b86ab159ecff48d8b7",
+      "bytes": 14500
+    },
+    {
+      "path": "frontend/src/utils/uploads.js",
+      "sha256": "8308e91c379350d33befffc625e9ac09fb3748aca2635037570b1a9e713aca72",
+      "bytes": 806
+    },
+    {
+      "path": "frontend/src/utils/useGraphDrag.js",
+      "sha256": "504f33e11be08f9e4fdd03d2d839dc6ed0e4400aeea01dc8794913cfe5be85a1",
+      "bytes": 3608
+    },
+    {
+      "path": "frontend/src/views/Account.vue",
+      "sha256": "3ef09d2833971e678598ba84f58ef1a7702157be004aef198d761c651c8ae873",
+      "bytes": 15207
+    },
+    {
+      "path": "frontend/src/views/ChartLab.vue",
+      "sha256": "a09681e38e715202d408f4ca98a95d712fe63fcc23b483d14d726d33073b70c0",
+      "bytes": 51358
+    },
+    {
+      "path": "frontend/src/views/Home.vue",
+      "sha256": "0c69bd768b39d09207714c28b8b196300317e0bfd93fcff56ad97af470eedf10",
+      "bytes": 19441
+    },
+    {
+      "path": "frontend/src/views/InteractionView.vue",
+      "sha256": "0293da4d0ceab1f9b6bf38a3b3199fbc81cfbbe1fec17aace93432193484eab0",
+      "bytes": 9107
+    },
+    {
+      "path": "frontend/src/views/LaunchHome.vue",
+      "sha256": "5b8d84d3029bb2f751b8a9c176212f22754d2a1742ef230a82daeccb04dcc523",
+      "bytes": 2419
+    },
+    {
+      "path": "frontend/src/views/Legal.vue",
+      "sha256": "e4066a41c80ccaed7c80d9c2cb8a211d7fa241834a1835d5b62f85a8f2f311ce",
+      "bytes": 3933
+    },
+    {
+      "path": "frontend/src/views/MainView.vue",
+      "sha256": "f791591752e5bae55e039eb1f560a9768d025e20f6be624929b66d8e88664f28",
+      "bytes": 15603
+    },
+    {
+      "path": "frontend/src/views/MarketLab.vue",
+      "sha256": "6d3e1a7b7ba71bdc9e717e785a9916d7e3ada1838ee3610abf5e67c34f342a47",
+      "bytes": 36391
+    },
+    {
+      "path": "frontend/src/views/PreviewAccount.vue",
+      "sha256": "69ea492d431aa8fdd7f035c1f1f243301fbe494e46b83765a6a1e3a48e1021f7",
+      "bytes": 835
+    },
+    {
+      "path": "frontend/src/views/PreviewLab.vue",
+      "sha256": "ba81b7e8327e0c258ebba09d7e95f26f0a704fc56afbb56867bcf33abab4674c",
+      "bytes": 6254
+    },
+    {
+      "path": "frontend/src/views/Pricing.vue",
+      "sha256": "84125eb75b8908c38c693b69e70ba5ba962bba24b879ffd4dfa9d52447f7d99c",
+      "bytes": 3782
+    },
+    {
+      "path": "frontend/src/views/Process.vue",
+      "sha256": "23296f9e52a7c35f08756df3ffe411aa3030e0dfca5b6db6a487697d7d826c27",
+      "bytes": 52729
+    },
+    {
+      "path": "frontend/src/views/ReportView.vue",
+      "sha256": "8eda0dc8349d0f22b81dec02069fcc9df884a1ff502ca4352889a7dc4cdaea53",
+      "bytes": 9286
+    },
+    {
+      "path": "frontend/src/views/ResearchHome.vue",
+      "sha256": "0b4c17d8f699ae1bbf60ab17332b629edd4cf9914139185ef28cae8a946da7b9",
+      "bytes": 4603
+    },
+    {
+      "path": "frontend/src/views/SavedResearch.vue",
+      "sha256": "5d478eed9b046ea4b8af8a891d687a5a34c29a009c333267167595a6d941d835",
+      "bytes": 8361
+    },
+    {
+      "path": "frontend/src/views/SimulationRunView.vue",
+      "sha256": "b3487af73e4bd45f8c2cc2665891f7de5bdd133098bbc4bfae30293be6dfa6e3",
+      "bytes": 12180
+    },
+    {
+      "path": "frontend/src/views/SimulationView.vue",
+      "sha256": "dc447315f83f5668966a250cdd0b71fa4db96510c3d324917faa41a5fadb6b15",
+      "bytes": 11516
+    },
+    {
+      "path": "frontend/src/views/StockLab.vue",
+      "sha256": "ae4f63cb86abbe41000e60bbf2c9a4b8b6d10ef91bdf6dbdc0107571557818fa",
+      "bytes": 46063
+    },
+    {
+      "path": "frontend/tests/launchPlans.test.cjs",
+      "sha256": "2d9563f698f0e6d9ee6ca868149ad1fc91db76204f2ab8bc9178f4bede0428cf",
+      "bytes": 2148
+    },
+    {
+      "path": "frontend/vite.config.js",
+      "sha256": "31bd29a729a845dc8c04d62aa479515df00e5b211f49995715936c6216365726",
+      "bytes": 1344
+    },
+    {
+      "path": "locales/en.json",
+      "sha256": "9686ec8d7b532c8cae4499cf9add64f64a00c0325727d45b8015179f4080b4d9",
+      "bytes": 38938
+    },
+    {
+      "path": "locales/languages.json",
+      "sha256": "cc20a91892545e1a646cd997b7d3cd992fc6d85fdcdb8668bc00ca4e69da7b58",
+      "bytes": 715
+    },
+    {
+      "path": "locales/zh.json",
+      "sha256": "c4750695dada953bfcd736d74b91adefb886ac8462775ecc260a0c7e11256350",
+      "bytes": 37533
+    },
+    {
+      "path": "scripts/check_preview.mjs",
+      "sha256": "65f8d92508f38eeccf0afe32d53d23d2d72cd1dbcecee78a7cf627a98510d15e",
+      "bytes": 1150
+    }
+  ]
+}

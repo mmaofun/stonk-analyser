@@ -1,0 +1,8 @@
+<template><nav class="chart-workflow" aria-label="Chart analysis workflow"><button v-for="(step,index) in steps" :key="step.id" :class="{current:phase===step.id,done:phase==='results'&&index<2||phase==='analysis'&&index===0}" :aria-current="phase===step.id?'step':undefined" :disabled="index===1&&!run||index===2&&!run?.verdict" @click="$emit('step',step.id)"><span>{{ index+1 }}</span>{{ step.label }}</button></nav></template>
+<script setup>
+defineProps({phase:{type:String,default:'upload'},run:Object});defineEmits(['step'])
+const steps=[{id:'upload',label:'Upload chart'},{id:'analysis',label:'Agents analysing'},{id:'results',label:'Results'}]
+</script>
+<style scoped>
+.chart-workflow{display:flex;align-items:center;gap:18px;padding:5px 0 24px;margin-bottom:22px;border-bottom:1px solid var(--research-line)}button{display:flex;align-items:center;gap:10px;flex:1;position:relative;border:0;padding:0;background:none;color:var(--research-muted);font:inherit;font-size:12px;text-align:left;cursor:pointer;min-height:38px}button:not(:last-child):after{content:'';height:1px;background:var(--research-line);flex:1;margin-left:12px}button span{display:grid;place-items:center;flex:none;width:30px;height:30px;border:1px solid var(--research-line);border-radius:50%;font-size:11px}.current{color:var(--research-ink)}.current span{background:var(--research-accent);color:#10151b;border-color:var(--research-accent)}button:disabled{cursor:default;opacity:.6}@media(max-width:620px){.chart-workflow{gap:9px;padding-bottom:17px;margin-bottom:18px}button{font-size:10px;gap:6px}button:not(:last-child):after{display:none}button span{width:27px;height:27px}}
+</style>
